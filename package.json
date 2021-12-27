@@ -1,19 +1,17 @@
 {
-  "name": "yny.wiki",
+  "name": "module-federation.wiki",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "pkgName": "",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "update:info": "node bin/update"
+    "docs:build": "vuepress build docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "axios": "^0.19.2",
     "vue2-pro-cli": "^1.0.3",
     "vuepress": "^1.5.2"
   }

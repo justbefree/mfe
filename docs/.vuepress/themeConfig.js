@@ -2,49 +2,23 @@
 * @Author: Just be free
 * @Date:   2020-07-10 14:04:39
 * @Last Modified by:   Just be free
-* @Last Modified time: 2021-12-27 10:19:04
+* @Last Modified time: 2021-12-27 15:25:06
 * @E-mail: justbefree@126.com
 */
 module.exports = {
   nav: [
     { text: "Home", link: "/" },
-    { text: "Design", link: "/design/" },
-    { text: "行程配置解读", link: "/trip/" },
-    {
-      text: "前端设计方案",
-      link: "/fe-design/"
-    },
+    { text: "模块联邦", link: "/module-federation/" },
   ],
   sidebar: {
-    "/design/": [
-      ["colors.md", "Colors"]
-    ],
-    "/trip/": [
+    "/module-federation/": [
       {
-        title: "行程",
+        title: "概念",
         collapsable: true,
         children: [
-          ["trip.md", "行程配置"]
         ]
       }
     ],
-    "/fe-design/": [
-      {
-        title: "云商旅前端设计方案",
-        collapsable: true,
-        children: [
-          ["ai.md", "AI语音交互操作商旅"],
-          ["interaction.md", "云商旅和ECS、共享交互设计"],
-          ["sensors.md", "神策数据埋点设计方案"],
-          ["pay.md", "酒店混付设计方案"],
-          ["postmessage.md", "postMessage实现类"],
-          ["third-supplier.md", "云商旅对接三方供应商【H5对接】"],
-          ["performance.md", "前端渲染速度优化方案"],
-          ["toggle-theme.md","前端主题切换"],
-        ]
-      }
-   
-    ]
   },
   lastUpdated: "Last Updated",
   // Assumes GitHub. Can also be a full GitLab url.

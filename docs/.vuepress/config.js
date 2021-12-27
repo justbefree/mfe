@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-07-10 09:56:25
 * @Last Modified by:   Just be free
-* @Last Modified time: 2021-10-18 14:15:38
+* @Last Modified time: 2021-12-27 15:22:22
 * @E-mail: justbefree@126.com
 */
 const themeConfig = require("./themeConfig");
@@ -20,7 +20,7 @@ module.exports = {
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
       lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-      title: '商旅wiki',
+      title: 'Module federation',
       description: 'docs'
     }
     // '/zh/': {

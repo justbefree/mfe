@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-07-10 14:04:39
 * @Last Modified by:   Just be free
-* @Last Modified time: 2021-12-27 15:25:06
+* @Last Modified time: 2021-12-28 13:55:25
 * @E-mail: justbefree@126.com
 */
 module.exports = {
@@ -16,6 +16,13 @@ module.exports = {
         title: "概念",
         collapsable: true,
         children: [
+        ]
+      },
+      {
+        title: "实战",
+        collapsable: true,
+        children: [
+          ["vue.md", "module federation Vue"] 
         ]
       }
     ],

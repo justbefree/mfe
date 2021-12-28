@@ -2,11 +2,11 @@
 * @Author: Just be free
 * @Date:   2020-07-10 09:56:25
 * @Last Modified by:   Just be free
-* @Last Modified time: 2021-12-27 15:22:22
+* @Last Modified time: 2021-12-28 10:23:39
 * @E-mail: justbefree@126.com
 */
 const themeConfig = require("./themeConfig");
-const base = process.env.NODE_ENV === 'production' ? "/" : "/";
+const base = process.env.NODE_ENV === 'production' ? "/module-federation-wiki/" : "/";
 module.exports = {
   // title: "yn-components 组件案例文档",
   // description: "前端基础组件技术文档",

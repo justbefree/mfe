@@ -303,6 +303,10 @@ yarn serve
 ## Structure
 <img :src="$withBase('/imgs/module-federation-vue.png')"/>
 
+## Source code
+
+All examples can be found [here](https://github.com/justbefree/module-fereation-vue)
+
 
 
 

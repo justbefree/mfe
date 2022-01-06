@@ -67,3 +67,21 @@ export default {
 ```
 
 ### ②直接在Platform的路由注册的地方引入FlightList及HotelList组件
+
+```js
+
+...
+[
+  {
+    path: "/flight/list",
+    component: () => import("flight/flightList")
+  },
+  {
+    path: "/hotel/list",
+    component: () => import("hotel/hotelList")
+  }
+]
+...
+
+
+```

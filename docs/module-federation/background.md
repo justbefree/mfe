@@ -15,5 +15,13 @@
 <img :src="$withBase('/imgs/mfe.png')"/>
 一个应用由来自多个应用对外暴露包的集合
 
-[参考](https://mp.weixin.qq.com/s/b5Gl_1yX1enktU9oulO9zg)
+## 功能与目的
+
+功能：webpack4 以下的构建结果标明，webpack对外只提供了一个全局的webpackJsonp数组(注意不是方法)，每个异步chunk加载后通过该数组将自身的modules push(该push方法实际上被劫持修改过的)到内部webpack_modules这个对象上，内部变量可以访问到该对象，但外部是无法获取到的，完全属于“暗箱操作”，这也导致了无法跟外界环境进行模块“联邦”，这也是为什么webpack5中引进了模块联邦机制。通过该机制，可以让构建后的代码库动态的、运行时的跑在另一个代码库中。
+
+目的：通过细化功能模块、组件复用、共享第三方库、runtime dependencies线上加载npm包等，可以更好的服务于多页应用、微前端等开发模式。
+
+[精读《Webpack5 新特性 - 模块联邦》](https://mp.weixin.qq.com/s/b5Gl_1yX1enktU9oulO9zg)
+
+[探索 webpack5 新特性 Module federation 引发的javascript共享模块变革](https://blog.csdn.net/yingyangxing/article/details/109653116)
 

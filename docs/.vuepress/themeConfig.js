@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-07-10 14:04:39
 * @Last Modified by:   Just be free
-* @Last Modified time: 2022-01-05 14:29:40
+* @Last Modified time: 2022-02-11 15:43:34
 * @E-mail: justbefree@126.com
 */
 module.exports = {
@@ -16,6 +16,7 @@ module.exports = {
         title: "概念",
         collapsable: true,
         children: [
+          ["background.md", "背景"]
         ]
       },
       {
@@ -31,7 +32,9 @@ module.exports = {
         children: [
           ["ajax.md", "异步请求"],
           ["router.md", "路由"],
-          ["advanced.md", "advanced"]
+          ["advanced.md", "advanced"],
+          ["library.md", "第三方库引用"],
+          ["style.md", "样式"]
         ]
       }
     ],

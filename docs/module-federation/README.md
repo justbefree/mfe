@@ -60,7 +60,7 @@ Shared modules are modules that are both, overridable and provided as overrides 
 这些应用都是双向的**hosts**，任何一个应用先加载，然后成为一个**host**，当你改变路由时候，其它federated modules被动态加载。然而当你刷新页面的时候，第一个被加载的就会成为一个**host**
 
 怎么理解呢？举个例子
-当你打开一个应用并进入着陆页，我们成为home页，这时候home页变成了**host**，然后你接着访问about页面，这时候host（home页面）会到另一个独立的应用动态加载about页面，但是注意，加载about页面并不需要加载主程序的entry point，也不是整个应用，而是仅仅包含about页面这个页面所需的字符。这个时候，如果我在about页面刷新浏览器，这时候about页面变成了**host**。所有的应用既是**remote**又是**host**，也即可被消费，也能消费其他模块（federated module）。
+当你打开一个应用并进入着陆页，我们称为home页，这时候home页变成了**host**，然后你接着访问about页面，这时候host（home页面）会到另一个独立的应用动态加载about页面，但是注意，加载about页面并不需要加载主程序的entry point，也不是整个应用，而是仅仅包含about页面这个页面所需的字符。这个时候，如果我在about页面刷新浏览器，这时候about页面变成了**host**。所有的应用既是**remote**又是**host**，也即可被消费，也能消费其他模块（federated module）。
 
 
 
@@ -68,3 +68,5 @@ Shared modules are modules that are both, overridable and provided as overrides 
 
   - [webpack-5-module-federation-a-game-changer-in-javascript-architecture](https://indepth.dev/posts/1173/webpack-5-module-federation-a-game-changer-in-javascript-architecture)
   - [module-federation-motivation](https://github.com/webpack/changelog-v5/blob/master/guides/module-federation.md)
+
+  - [Module federation 原理研究](https://blog.towavephone.com/module-federation-principle-research/)

@@ -69,7 +69,6 @@ export default {
 ### ②直接在Platform的路由注册的地方引入FlightList及HotelList组件
 
 ```js
-
 ...
 [
   {
@@ -82,6 +81,19 @@ export default {
   }
 ]
 ...
+```
 
+## 路由参数如何跨模块传递
 
+假如remote的某一个路由，有参数query = { a: 1, b: 2, c: 3 }，那在host里面在引入remote路由定义路由也要在query里面定义这个参数，举个栗子：
+
+```js
+// remote
+// 在remote的应用里面，有下面的路由定义
+// https://remote-hotel.com/#/hotel/list?a=1&b=2&c=3
+
+// host
+// 同样，在host里面因为引用了remote的模块，在调用remote模块的路由里面
+// 也需要设置同样的参数
+// https://host-platform.com/#/views/hotel-list?a=1&b=2&c=3
 ```

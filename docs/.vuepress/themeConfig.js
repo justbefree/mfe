@@ -2,13 +2,14 @@
 * @Author: Just be free
 * @Date:   2020-07-10 14:04:39
 * @Last Modified by:   Just be free
-* @Last Modified time: 2022-02-11 15:43:34
+* @Last Modified time: 2022-03-14 11:36:32
 * @E-mail: justbefree@126.com
 */
 module.exports = {
   nav: [
     { text: "Home", link: "/" },
     { text: "模块联邦", link: "/module-federation/" },
+    { text: "微前端", link: "/mfe/" }
   ],
   sidebar: {
     "/module-federation/": [
@@ -38,6 +39,15 @@ module.exports = {
         ]
       }
     ],
+    "/mfe/": [
+      {
+        title: "定义",
+        collapsable: true,
+        children: [
+          ["define.md", "single-spa"]
+        ]
+      }
+    ]
   },
   lastUpdated: "Last Updated",
   // Assumes GitHub. Can also be a full GitLab url.

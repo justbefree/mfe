@@ -2,14 +2,15 @@
 * @Author: Just be free
 * @Date:   2020-07-10 14:04:39
 * @Last Modified by:   Just be free
-* @Last Modified time: 2022-03-14 11:36:32
+* @Last Modified time: 2022-03-17 17:02:14
 * @E-mail: justbefree@126.com
 */
 module.exports = {
   nav: [
     { text: "Home", link: "/" },
-    { text: "模块联邦", link: "/module-federation/" },
-    { text: "微前端", link: "/mfe/" }
+    { text: "module-federation", link: "/module-federation/" },
+    { text: "single-spa", link: "/single-spa/" },
+    { text: "mfe", link: "/mfe/" }
   ],
   sidebar: {
     "/module-federation/": [
@@ -36,6 +37,23 @@ module.exports = {
           ["advanced.md", "advanced"],
           ["library.md", "第三方库引用"],
           ["style.md", "样式"]
+        ]
+      }
+    ],
+    "/single-spa/": [
+      {
+        title: "学习",
+        collapsable: true,
+        children: [
+          ["basic.md", "基础"],
+          ["advanced.md", "深入"]
+        ]
+      },
+      {
+        title: "实战",
+        collapsable: true,
+        children: [
+          ["vue.md", "create-single-spa"]
         ]
       }
     ],

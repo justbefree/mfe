@@ -1,4 +1,4 @@
-# Build a ferderated App based on Vue
+# Build a ferderated App based on Vue framework
 
 
 ## Before you start
@@ -14,45 +14,45 @@
 
 为了尽可能模拟Vue不同版本之间的模块联邦，我们创建4个Vue项目，分别是hotel、train、flight、platform
 
-```js
+```bash
 
-// 1. 创建一个空文件夹并进入
+# 1. 创建一个空文件夹并进入
 
 mkdir module-federation && cd module-federation
 
-// 2. 初始化lerna
+# 2. 初始化lerna
 
 lerna init
 
-// 为了更加形象，我把packages目录改为applications
-//另外也需要在lerna.json里面修改一下对应的packages字段
+# 为了更加形象，我把packages目录改为applications
+#另外也需要在lerna.json里面修改一下对应的packages字段
 
-// 3. 创建项目
+# 3. 创建项目
 
 
-vue create hotel // 创建hotel项目，default Vue2
-vue create train // 创建train项目，Vue2 + TypeScript, steps follow below
+vue create hotel # 创建hotel项目，default Vue2
+vue create train # 创建train项目，Vue2 + TypeScript, steps follow below
 
-// 1. Manually select features
-// 2. toggle a
-// 3. 2.x
-// 4. Use class-style component syntax? (Y/n) Y
-// 5. Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? (Y/n) Y
-// 6. Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) n
-// 7. Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with node-sass) 
-// 8. Pick a linter / formatter config: ESLint + Prettier 
-// 9. Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection) <a> toggle
-// 10. Pick a unit testing solution: Jest
-// 11.  Pick an E2E testing solution: (Use arrow keys) Cypress (Chrome only) 
-// 12.  Where do you prefer placing config for Babel, ESLint, etc.? (Use arrow keys) In dedicated config files 
-// 13.  Save this as a preset for future projects? (y/N) y
+# 1. Manually select features
+# 2. toggle a
+# 3. 2.x
+# 4. Use class-style component syntax? (Y/n) Y
+# 5. Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? (Y/n) Y
+# 6. Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) n
+# 7. Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with node-sass) 
+# 8. Pick a linter / formatter config: ESLint + Prettier 
+# 9. Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection) <a> toggle
+# 10. Pick a unit testing solution: Jest
+# 11.  Pick an E2E testing solution: (Use arrow keys) Cypress (Chrome only) 
+# 12.  Where do you prefer placing config for Babel, ESLint, etc.? (Use arrow keys) In dedicated config files 
+# 13.  Save this as a preset for future projects? (y/N) y
 
-vue create flight // 创建flight项目，default Vue3
+vue create flight # 创建flight项目，default Vue3
 
-vue create platform // 创建platform项目，具体步骤参考train项目的步骤，唯一的区别是选择Vue3版本
+vue create platform # 创建platform项目，具体步骤参考train项目的步骤，唯一的区别是选择Vue3版本
 
-// 创建完以上项目后，记得在每个项目内把package.json对应name字段修改为 
-// @applications/${name}，name值对应fligjht、train、hotel、platform的一个
+# 创建完以上项目后，记得在每个项目内把package.json对应name字段修改为 
+# @applications/${name}，name值对应fligjht、train、hotel、platform的一个
 
 ```
 
@@ -65,20 +65,20 @@ vue create platform // 创建platform项目，具体步骤参考train项目的�
 创建完项目以后，修改lerna.json新增"npmClient"属性并设置值为"yarn"
 
 然后执行命令
-```js
+```bash
 lerna bootstrap
 
-// 输出结果为
-// lerna notice cli v4.0.0
-// lerna info Bootstrapping 4 packages
-// lerna info Symlinking packages and binaries
-// lerna success Bootstrapped 4 packages
+# 输出结果为
+# lerna notice cli v4.0.0
+# lerna info Bootstrapping 4 packages
+# lerna info Symlinking packages and binaries
+# lerna success Bootstrapped 4 packages
 ```
 
 ## Install http-server
 为每个项目安装http-server，并修改每个项目的package.json，新增"start"属性，并设置值为"http-server -c-1 -p 8081 ./dist"
 
-```js
+```bash
 lerna add http-server --dev
 ```
 

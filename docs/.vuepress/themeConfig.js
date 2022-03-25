@@ -2,7 +2,7 @@
 * @Author: Just be free
 * @Date:   2020-07-10 14:04:39
 * @Last Modified by:   Just be free
-* @Last Modified time: 2022-03-17 17:02:14
+* @Last Modified time: 2022-03-25 12:36:31
 * @E-mail: justbefree@126.com
 */
 module.exports = {
@@ -32,11 +32,14 @@ module.exports = {
         title: "深入",
         collapsable: true,
         children: [
+          ["config.md", "配置文件解读"],
           ["ajax.md", "异步请求"],
           ["router.md", "路由"],
           ["advanced.md", "advanced"],
           ["library.md", "第三方库引用"],
-          ["style.md", "样式"]
+          ["style.md", "样式"],
+          ["assets.md", "静态资源"],
+          ["error.md", "常见错误"]
         ]
       }
     ],
